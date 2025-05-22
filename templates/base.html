@@ -1,13 +1,43 @@
-<html>
-    <head>
-        <title>
-            {% block title %}
-       
-            {% endblock %}
-        </title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
-    </head>
-    <body>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='footer.css') }}">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .page-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .page-footer {
+            background: linear-gradient(to right, #1f2c47, #2693d6);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 3px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+
         <!-- Navbar -->
         <div class="navbar">
             <a href="{{ url_for('home') }}">Home</a>
@@ -15,10 +45,22 @@
             <a href="{{ url_for('elencotutor') }}">Elenco tutor</a>
             <a href="{{ url_for('formselzioneargomentitutor') }}">Argomenti spiegati da un tutor</a>
         </div>
-        
 
         <!-- Contenuto principale -->
-        {% block content %}
-        {% endblock %}
-    </body>
+        <div class="main-content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-container">
+                <p><strong>Andrea Caforio</strong> – Classe 5BI</p>
+                <p>ITT "G.Giorgi" – Brindisi</p>
+                <p>Anno scolastico 2024/2025</p>
+            </div>
+        </footer>
+
+    </div>
+</body>
 </html>
