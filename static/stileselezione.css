@@ -1,0 +1,62 @@
+/* Contenuto principale */
+main {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 80px); /* per evitare che il contenuto scompaia sotto la navbar */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Titolo */
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Form centrale */
+form {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Etichetta */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Select dropdown */
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+/* Bottone */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #1976d2; /* blu simile a quello della navbar/calendario */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #125ca1;
+}

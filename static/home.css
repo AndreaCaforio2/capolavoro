@@ -1,0 +1,172 @@
+/* Impostazioni globali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6f0f7;
+    color: #4a4a4a;
+    font-size: 16px;
+    line-height: 1.7;
+    text-align: center;
+}
+
+/* Container principale */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Titolo principale */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Descrizione */
+.description p {
+    font-size: 1.25rem;
+    color: #f0f3f7;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+    transition: transform 0.3s ease-in-out, color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Modifica del colore di hover sulla descrizione */
+.description p:hover {
+    transform: scale(1.05);
+    color: #2c3e50; /* Testo scuro */
+    background-color: #f39c12; /* Colore di background brillante */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Ombra esterna per evidenziare */
+}
+
+/* Intestazioni delle sezioni */
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: slideUp 1s ease-out;
+}
+
+/* Lista degli obiettivi */
+ul {
+    margin-left: 40px;
+    font-size: 1.1rem;
+    list-style-type: none;
+}
+
+ul li {
+    background-color: rgba(255, 255, 255, 0.3); /* Maggiore contrasto sullo sfondo */
+    color: #fff;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Modifica del colore di hover sugli elementi della lista */
+ul li:hover {
+    background-color: #3498db; /* Colore di sfondo brillante */
+    color: #fff; /* Colore del testo chiaro */
+    transform: translateX(10px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* Ombra quando si passa sopra */
+}
+
+ul li::before {
+    content: '•';
+    font-size: 20px;
+    position: absolute;
+    left: -15px;
+    top: 8px;
+    color: #f39c12; /* Pallino dorato per maggiore visibilità */
+}
+
+/* Link per l'iscrizione */
+a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 4px;
+}
+
+a:hover {
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Modalità di Lezione */
+strong {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+/* Animazione hover per le sezioni */
+h2, ul, p {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h2:hover, p:hover, ul li:hover {
+    color: #fff; /* Cambia colore in bianco */
+    transform: translateY(-5px);
+}
+
+/* Efficace design responsivo per dispositivi mobili */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    ul li {
+        font-size: 1rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+}
