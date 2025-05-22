@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Calendario Corso Competitive Programming
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='calendario.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<div class="container">
+    <h1 class="title">Calendario Corso Competitive Programming</h1>
+
+    <!-- Descrizione aggiunta -->
+    <p class="description">
+    </p>
+
+    <div class="table-container">
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Data</th>
+                    <th>Luogo</th>
+                    <th>Attività</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for element in result %}
+                <tr>
+                    <td>{{ element[0] }}</td>
+                    <td>{{ element[1] }}</td>
+                    <td>{{ element[2] | safe }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
