@@ -1,0 +1,123 @@
+/* Impostazioni globali */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #e6f0f7;
+    color: #4a4a4a;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Container principale */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Titolo principale */
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Descrizione */
+.description {
+    font-size: 1.25rem;
+    color: #f0f3f7;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Tabella */
+.table-container {
+    overflow-x: auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    color: white;
+}
+
+.custom-table th,
+.custom-table td {
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.custom-table th {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f39c12;
+}
+
+.custom-table td {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1rem;
+}
+
+.custom-table tr:hover td {
+    background-color: #f39c12;
+    color: #2c3e50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .custom-table th,
+    .custom-table td {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+}
