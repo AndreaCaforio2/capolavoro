@@ -1,0 +1,58 @@
+.page-footer {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: #f0f3f7;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.95rem;
+    margin-top: 40px;
+    border-top: 3px solid #f39c12;
+    box-shadow: 0 -8px 20px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+    animation: fadeIn 1s ease-in-out;
+    border-radius: 12px 12px 0 0;
+}
+
+.footer-container {
+    max-width: 960px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.page-footer p {
+    margin: 5px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-footer {
+        padding: 20px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Imposta il layout sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+/* Esempio base di stile per il footer */
+.page-footer {
+    background: linear-gradient(to right, #1f2c47, #2693d6);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid orange;
+}
